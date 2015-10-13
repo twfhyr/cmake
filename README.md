@@ -1,4 +1,5 @@
-<title>solve the problem when cannot find boost libraries</title>
+solve the problem when cannot find boost libraries
+==
 <p>
 when I use the cmake tool at the windows 7 platform,I meet the problem that cann't find the boost which i have already installed.
 </p>
