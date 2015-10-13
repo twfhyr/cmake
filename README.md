@@ -50,25 +50,7 @@ then I added set (BOOST_DEBUG ON) at the CMakeList.txt to debug the cmake,The re
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:1045 ] Searching for THREAD_LIBRARY_RELEASE: boost_thread-vc120-mt-1_59;boost_thread-vc120-mt;boost_thread-mt-1_59;boost_thread-mt;boost_thread
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:1087 ] Searching for THREAD_LIBRARY_DEBUG: boost_thread-vc120-mt-gd-1_59;boost_thread-vc120-mt-gd;boost_thread-mt-gd-1_59;boost_thread-mt-gd;boost_thread-mt;boost_thread
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:1153 ] Boost_FOUND = 1
-CMake Error at C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:1247 (message):
-  Unable to find the requested Boost libraries.
 
-  Boost version: 1.59.0
-
-  Boost include path: D:/boost_1_59_0
-
-  Could not find the following Boost libraries:
-
-          boost_system
-          boost_program_options
-          boost_filesystem
-          boost_thread
-
-  No Boost libraries were found.  You may need to set BOOST_LIBRARYDIR to the
-  directory containing Boost libraries or BOOST_ROOT to the location of
-  Boost.
-Call Stack (most recent call first):
-  CMakeLists.txt:98 (find_package)
 ```
 I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For example,it was serching for "boost_system-vc120-mt-gd-1_59",but in my folder it showed as "libboost_system-vc120-mt-gd-1_59".
 Then I check the findboost.cmake, and modify the  783 line set(Boost_LIB_PREFIX )as set(Boost_LIB_PREFIX "lib"). Then it worked
