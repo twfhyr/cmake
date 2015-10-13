@@ -6,7 +6,7 @@ when I used the cmake tool at the windows 7 platform,I met the problem that cann
 
 
 
-Unable to find the requested Boost libraries.
+<color="red">Unable to find the requested Boost libraries.
 
   Boost version: 1.59.0
 
@@ -28,7 +28,7 @@ Call Stack (most recent call first):
 
 Boost INCLUDE DIR IS: D:/boost_1_59_0
 Boost LIBRARY DIR IS: 
-
+</color>
 
 
 then I added 
