@@ -1,6 +1,8 @@
 # cmake
 solve the problem when cannot find boost libraries
+<p>
 when I use the cmake tool at the windows 7 platform,I meet the problem that cann't find the boost which i have already installed.
+</p>
 First I modified the environment,set the name"BOOST_ROOT",the value is the location of my boost version.But it didn't work.
 Then I added the line shown as followed in the project file CMakeList.txt.
 set(BOOST_ROOT D:/boost_1_59_0)
