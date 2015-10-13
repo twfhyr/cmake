@@ -4,9 +4,8 @@ solution about cannot find boost libraries
 when I used the cmake tool at the windows 7 platform,I met the problem that cann't find the boost library which i had already installed.
 </p>
 
-
-
-<color="red">Unable to find the requested Boost libraries.
+'''sh
+Unable to find the requested Boost libraries.
 
   Boost version: 1.59.0
 
@@ -24,11 +23,11 @@ when I used the cmake tool at the windows 7 platform,I met the problem that cann
   Boost.
 Call Stack (most recent call first):
   CMakeLists.txt:99 (find_package)
-
+'''
 
 Boost INCLUDE DIR IS: D:/boost_1_59_0
 Boost LIBRARY DIR IS: 
-</color>
+
 
 
 then I added 
