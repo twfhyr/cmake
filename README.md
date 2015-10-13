@@ -1,7 +1,7 @@
 solution about cannot find boost libraries
 ==
 <p>
-when I used the cmake tool at the windows 7 platform,I met the problem that cann't find the boost library which i had already installed.
+when I used the cmake tool at the windows 7 platform,I met the problem that cann't find the boost library which I  had already installed.
 </p>
 
 ```sh
@@ -52,10 +52,11 @@ Boost LIBRARY DIR IS:
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:1153 ] Boost_FOUND = 1
 
 ```
-    I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For     example,it was serching for
+    I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For example,it was serching for
     "boost_system-vc120-mt-gd-1_59",
     but in my folder it showed as 
     "libboost_system-vc120-mt-gd-1_59".
-    Then I check the findboost.cmake, and modify the  783 line set(Boost_LIB_PREFIX )as set(Boost_LIB_PREFIX "lib"). Then it     worked
+    Then I checked the findboost.cmake, and modify the  783 line set(Boost_LIB_PREFIX )as set(Boost_LIB_PREFIX "lib"). 
+    It worked
 
 I hope this experience can help someone
