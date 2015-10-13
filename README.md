@@ -4,7 +4,7 @@ solution about cannot find boost libraries
 when I used the cmake tool at the windows 7 platform,I met the problem that cann't find the boost library which i had already installed.
 </p>
 
-'''sh
+```sh
 Unable to find the requested Boost libraries.
 
   Boost version: 1.59.0
@@ -23,20 +23,16 @@ Unable to find the requested Boost libraries.
   Boost.
 Call Stack (most recent call first):
   CMakeLists.txt:99 (find_package)
-'''
+
 
 Boost INCLUDE DIR IS: D:/boost_1_59_0
 Boost LIBRARY DIR IS: 
 
+```
 
+then I added set (BOOST_DEBUG ON) at the CMakeList.txt to debug the cmake,The result was
 
-then I added 
-set (BOOST_DEBUG ON)
-at the CMakeList.txt to debug the cmake
-
-The result was
-
-*****************************************************************************************************************************
+```sh
 
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:714 ] location of version.hpp: D:/boost_1_59_0/boost/version.hpp
 [ C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cmake:738 ] version.hpp reveals boost 1.59.0
@@ -73,12 +69,8 @@ CMake Error at C:/Program Files (x86)/CMake/share/cmake-3.4/Modules/FindBoost.cm
   Boost.
 Call Stack (most recent call first):
   CMakeLists.txt:98 (find_package)
-*****************************************************************************************************************************
-I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For example,it was serching for 
-"boost_system-vc120-mt-gd-1_59",
-but in my folder it showed as 
-"libboost_system-vc120-mt-gd-1_59".
-Then I check the findboost.cmake, and modify the  783 line 
-set(Boost_LIB_PREFIX )
-as set(Boost_LIB_PREFIX "lib"). Then it worked
+```
+I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For example,it was serching for "boost_system-vc120-mt-gd-1_59",but in my folder it showed as "libboost_system-vc120-mt-gd-1_59".
+Then I check the findboost.cmake, and modify the  783 line set(Boost_LIB_PREFIX )as set(Boost_LIB_PREFIX "lib"). Then it worked
+
 I hope this experience can help someone
