@@ -1,14 +1,11 @@
-solve the problem when cannot find boost libraries
+solution about cannot find boost libraries
 ==
 <p>
-when I use the cmake tool at the windows 7 platform,I meet the problem that cann't find the boost which i have already installed.
+when I used the cmake tool at the windows 7 platform,I met the problem that cann't find the boost library which i had already installed.
 </p>
-First I modified the environment,set the name"BOOST_ROOT",the value is the location of my boost version.But it didn't work.
-Then I added the line shown as followed in the project file CMakeList.txt.
-set(BOOST_ROOT D:/boost_1_59_0)
-set(BOOST_LIBRARYDIR ${BOOST_ROOT}/stage/lib)"
-This time I met new trouble
-********************trouble*****************************
+
+
+
 Unable to find the requested Boost libraries.
 
   Boost version: 1.59.0
@@ -31,7 +28,9 @@ Call Stack (most recent call first):
 
 Boost INCLUDE DIR IS: D:/boost_1_59_0
 Boost LIBRARY DIR IS: 
-****************************************************************
+
+
+
 then I added 
 set (BOOST_DEBUG ON)
 at the CMakeList.txt to debug the cmake
