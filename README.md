@@ -53,7 +53,7 @@ Boost LIBRARY DIR IS:
 
 ```
     I checked the value in my D:/boost_1_59_0/stage/lib against the debug result and found that the name was not matched.For example,it was serching for
-    *"boost_system-vc120-mt-gd-1_59"*
+    _"boost_system-vc120-mt-gd-1_59"_
     but in my folder it showed as 
     "libboost_system-vc120-mt-gd-1_59".
     Then I checked the findboost.cmake, and modify the  783 line set(Boost_LIB_PREFIX )as set(Boost_LIB_PREFIX "lib"). 
